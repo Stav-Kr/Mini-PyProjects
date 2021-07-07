@@ -1,3 +1,7 @@
+# Simple web scrapper that prints in order from lowest to highest the articles 
+# from the first 3 pages of the website Hacker News, that have more than 100 points each 
+# (Based on ZTM Python Developer course)
+# Order of articles can be changes by setting the reverse=True on line 29
 import requests
 from bs4 import BeautifulSoup
 import pprint
