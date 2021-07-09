@@ -13,7 +13,7 @@ a_disc = soup.find_all(target="_blank")
 
 def discounds(links):
 
-    for item in enumerate(links):
+    for item in (links):
         
         anchors = item.find("a")
         href_from_anchors = anchors.get("href")
