@@ -18,7 +18,7 @@ def discounds(links):
         anchors = item.find("a")
         href_from_anchors = anchors.get("href")
         title_from_anchors = anchors.get('title')
-        pprint.pp(title_from_anchors)
+        pprint.pprint(title_from_anchors)
         pprint.pprint(href_from_anchors)
         print('')
 
