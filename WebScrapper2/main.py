@@ -19,7 +19,7 @@ def discounds(links):
         href_from_anchors = anchors.get("href")
         pprint.pprint(href_from_anchors)
         # title = links[index].getText()
-        pprint.pprint(href_from_anchors)
+        
 
 
 discounds(links)
