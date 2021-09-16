@@ -10,7 +10,9 @@ soup = BeautifulSoup(response.text, "lxml")
 price_class = soup.select(".priceValue")
 divs = soup.find_all('div')
 
-
+result = soup.find("div", {"class":".priceValue"})
+print(result)
+#print (result.text)
 #print(divs)
 print(price_class)
 def real_price(divs):
