@@ -3,29 +3,21 @@
 import requests
 from bs4 import BeautifulSoup
 import pprint
+import re
 import lxml
 
-response = requests.get("https://coinmarketcap.com/currencies/ethereum/")
+response = requests.get("https://ethereumprice.org/live/")
 soup = BeautifulSoup(response.text, "lxml")
-price_class = soup.select(".priceValue")
-divs = soup.find_all('div')
+get_price = soup.find_all( 'td')
+print(get_price)
+#price_class = get_price.find(".subPrice")
+# soup1 = BeautifulSoup("""<div id="coin-price" class="headline flash" >
+#  <span class="currency-symbol">$</span>
+#  <span class="value">5</span> </div>""", "xml")
+#print(soup)
+#print(price_class)
+# print(soup1.select_one("span[class*=value]").text)
 
-result = soup.find("div", {"class":".priceValue"})
-print(result)
-#print (result.text)
-#print(divs)
-print(price_class)
-def real_price(divs):
-
-    for item in (divs):
-        
-        anchors = item.find('text')
-        #href_from_anchors = anchors.get("href")
-        #title_from_anchors = anchors.get('title')
-        print(anchors)
-        
-        
-        
+#print(price_class[:1])
 
 
-real_price(price_class)
